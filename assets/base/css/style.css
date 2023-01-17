@@ -21,11 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-/*For Debugging Purpose*/
-body:last-child {
-    margin-bottom: 200vh;
-}
-
 /*Styles*/
 .text-my-grey {color: var(--my-grey);}
 .text-my-dark-blue {color: var(--my-dark-blue);}
