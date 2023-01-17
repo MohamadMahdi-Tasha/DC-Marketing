@@ -2,7 +2,17 @@
 // Variables
 const homeSwiperNextButton = document.querySelector('.home-swiper-next-btn');
 const homeSwiperPrevButton = document.querySelector('.home-swiper-prev-btn');
-const homeSwiper = new Swiper('.home-swiper', {slidesPerView: 2,spaceBetween: 30,});
+const homeSwiper = new Swiper('.home-swiper', {
+        spaceBetween: 30,
+        breakpoints: {
+            991: {
+                slidesPerView: 2,
+            },
+            0: {
+                slidesPerView: 1,
+            }
+        }
+});
 
 // When Clicked On Prev Or Next Button Slide The Slider To Previous Slide Or Next Of It
 homeSwiperPrevButton.addEventListener('click', () => homeSwiper.slidePrev())
