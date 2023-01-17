@@ -1,3 +1,4 @@
+/*Codes By Mahdi Tasha*/
 /*Importing Font*/
 @import "../font/font.css";
 
@@ -41,6 +42,8 @@ body:last-child {
 :is(.home-swiper-prev-btn, .home-swiper-next-btn).active svg path{fill: white}
 :is(.home-swiper-prev-btn, .home-swiper-next-btn):not(.active) {background-color: white;border-color: var(--my-orange)}
 :is(.home-swiper-prev-btn, .home-swiper-next-btn):not(.active) svg path{fill: var(--my-orange)}
+.footer-top-side {transform: translateY(-80px);}
+.squar-size {width: 40px;}
 
 .third-section-bottom-items-holder > .third-section-bottom-item {
     background-size: contain;
@@ -76,13 +79,14 @@ body > footer {
     margin-top: 10rem;
 }
 
-.footer-top-side {
-    transform: translateY(-80px);
-}
-
 /*Hover, Active, ...*/
 .home-swiper .swiper-slide:hover {border-color: var(--my-orange) !important;}
 button.bg-transparent.text-my-orange:hover {
     background-color: var(--my-orange) !important;
     color: white !important;
+}
+
+/*Media Querys*/
+@media (max-width: 991px) {
+    .border-end-mq-991-0.border-end {border-right: none !important;}
 }

@@ -1,3 +1,4 @@
+// Codes By Mahdi Tasha
 // Variables
 const homeSwiperNextButton = document.querySelector('.home-swiper-next-btn');
 const homeSwiperPrevButton = document.querySelector('.home-swiper-prev-btn');
