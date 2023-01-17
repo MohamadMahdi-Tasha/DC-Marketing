@@ -31,6 +31,10 @@ body {
     color: var(--my-orange);
 }
 
+.bg-my-orange {
+    background-color: var(--my-orange);
+}
+
 /*Hover, Active, ...*/
 button.bg-transparent.text-my-orange:hover {
     background-color: var(--my-orange) !important;
