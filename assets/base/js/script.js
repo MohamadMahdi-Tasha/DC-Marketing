@@ -2,17 +2,19 @@
 // Variables
 const homeSwiperNextButton = document.querySelector('.home-swiper-next-btn');
 const homeSwiperPrevButton = document.querySelector('.home-swiper-prev-btn');
-const homeSwiper = new Swiper('.home-swiper', {
-        spaceBetween: 30,
-        breakpoints: {
-            991: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            }
-        }
-});
+const mobileNavToggler = document.getElementById('mobile-nav-toggler');
+const mobileNavHolder = document.getElementById('mobile-nav-holder');
+const mobileNavDarkBg = document.getElementById('mobile-nav-dark-bg');
+const mobileNavCloser = document.getElementById('mobile-nav-closer');
+const homeSwiper = new Swiper('.home-swiper', {spaceBetween: 30, breakpoints: {991: {slidesPerView: 2,}, 0: {slidesPerView: 1,}}});
+
+// A Function That Toggles 'opened' Attribute On Mobile Nav Holder
+const mobileNavOpenAndClose = () => mobileNavHolder.toggleAttribute('opened');
+
+// Adding EventListener If Click To 'mobileNavDarkBg', 'mobileNavToggler' and 'mobileNavCloser' Which Calls 'mobileNavOpenAndClose' Function
+mobileNavDarkBg.addEventListener('click', mobileNavOpenAndClose)
+mobileNavToggler.addEventListener('click', mobileNavOpenAndClose)
+mobileNavCloser.addEventListener('click', mobileNavOpenAndClose)
 
 // When Clicked On Prev Or Next Button Slide The Slider To Previous Slide Or Next Of It
 homeSwiperPrevButton.addEventListener('click', () => homeSwiper.slidePrev())

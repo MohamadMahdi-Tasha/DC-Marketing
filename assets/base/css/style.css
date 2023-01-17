@@ -48,6 +48,11 @@ body:last-child {
 #mobile-nav-dark-bg {background-color: rgba(0,0,0,.5);transition: .3s;}
 #mobile-nav {transition: .3s;}
 
+#mobile-nav-holder[opened] > #mobile-nav-dark-bg{opacity: 1;pointer-events: visible;}
+#mobile-nav-holder:not([opened]) > #mobile-nav-dark-bg{opacity: 0;pointer-events: none;}
+#mobile-nav-holder[opened] > #mobile-nav{left: 0;}
+#mobile-nav-holder:not([opened]) > #mobile-nav{left: -75%;}
+
 .third-section-bottom-items-holder > .third-section-bottom-item {
     background-size: contain;
     background-repeat: no-repeat;

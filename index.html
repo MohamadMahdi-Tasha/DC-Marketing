@@ -24,15 +24,15 @@
     <title>DC Marketing</title>
 </head>
 <body>
-<!--Mobile Nav-->
-<div class="d-lg-none d-block">
+<!--Mobile Nav And Its Bg Holder-->
+<div class="d-lg-none d-block" id="mobile-nav-holder">
     <!--Dark Bg Of Mobile Nav-->
     <div id="mobile-nav-dark-bg" class="col-12 h-100 position-fixed"></div>
     <!--Mobile Nav-->
     <nav class="bg-my-orange col-9 position-fixed p-3 h-100 overflow-auto" id="mobile-nav">
         <div class="d-flex justify-content-between mb-4">
             <a class="d-block" href="#"><img src="assets/base/img/img-logo.png" alt="DC Marketing Logo"></a>
-            <button class="bg-transparent border-my-dark-blue text-my-dark-blue rounded-3">
+            <button id="mobile-nav-closer" class="bg-transparent border-my-dark-blue text-my-dark-blue rounded-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
                 </svg>
@@ -60,7 +60,7 @@
             </ul>
             <div class="d-flex">
                 <a href="#" class="d-block"><button class="px-3 py-2 rounded-3 bg-transparent fw-normal border-my-orange text-my-orange">Get In Touch</button></a>
-                <button class="d-lg-none d-flex align-items-center justify-content-center ms-3 bg-my-orange border-my-orange text-white rounded-3 squar-size">
+                <button id="mobile-nav-toggler" class="d-lg-none d-flex align-items-center justify-content-center ms-3 bg-my-orange border-my-orange text-white rounded-3 squar-size">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg>
