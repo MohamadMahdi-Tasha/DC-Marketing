@@ -5,6 +5,7 @@
 :root {
     --my-grey: #4F5665;
     --my-orange: #D85B28;
+    --my-dark-blue: #0B132A;
 }
 
 /*Defualt Styles*/
@@ -16,10 +17,17 @@ button {
 body {
     font-size: 12px;
     font-family: 'Rubik' ,sans-serif !important;
+    overflow-x: hidden;
+}
+
+/*For Debugging Purpose*/
+body:last-child {
+    margin-bottom: 200vh;
 }
 
 /*Styles*/
 .text-my-grey {color: var(--my-grey);}
+.text-my-dark-blue {color: var(--my-dark-blue);}
 .border-my-orange {border: 1px solid var(--my-orange);}
 .text-my-orange {color: var(--my-orange);}
 .bg-my-orange {background-color: var(--my-orange);}
@@ -28,6 +36,7 @@ body {
 .third-section-bottom-items-holder > .third-section-bottom-item:nth-of-type(2) {background-image: url("../img/home/third-section/item-2/bg-2.png");}
 .third-section-bottom-items-holder > .third-section-bottom-item:nth-of-type(3) {background-image: url("../img/home/third-section/item-3/bg-3.png");}
 .third-section-bottom-items-holder > .third-section-bottom-item:last-of-type {background-image: url("../img/home/third-section/item-4/bg-4.png");}
+.home-swiper .swiper-slide {transition: .3s}
 
 .third-section-bottom-items-holder > .third-section-bottom-item {
     background-size: contain;
@@ -35,7 +44,36 @@ body {
     background-position: center;
 }
 
+.home-swiper-pagination {
+    height: 15px;
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.home-swiper-pagination:not(.active) {
+    width: 15px;
+    background-color: #DDE0E4;
+}
+
+.home-swiper-pagination.active {
+    background-color: var(--my-orange);
+    width: 30px;
+}
+
+.home-swiper-prev-btn, .home-swiper-next-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid;
+}
+
+:is(.home-swiper-prev-btn, .home-swiper-next-btn).active {background-color: var(--my-orange);border-color: var(--my-orange)}
+:is(.home-swiper-prev-btn, .home-swiper-next-btn).active svg path{fill: white}
+:is(.home-swiper-prev-btn, .home-swiper-next-btn):not(.active) {background-color: white;border-color: var(--my-orange)}
+:is(.home-swiper-prev-btn, .home-swiper-next-btn):not(.active) svg path{fill: var(--my-orange)}
+
 /*Hover, Active, ...*/
+.home-swiper .swiper-slide:hover {border-color: var(--my-orange) !important;}
 button.bg-transparent.text-my-orange:hover {
     background-color: var(--my-orange) !important;
     color: white !important;
