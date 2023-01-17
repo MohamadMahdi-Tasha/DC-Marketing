@@ -28,18 +28,13 @@ homeSwiper.on('slideChange', () => {
     const homeSwiperPaginationToDeactivate = document.querySelector(`.home-swiper-pagination.active`);
 
     // If Index Of Slide Equals To 1 Then Remove Class Of Active From Previous Button
-    if (slideIndex === 1) {
-        homeSwiperPrevButton.classList.remove('active')
-    }
-    // If Index Of Slide Equals To 3 Then Remove Class Of Active From Next Button
-    else if (slideIndex === 3) {
-        homeSwiperNextButton.classList.remove('active')
-    }
+    if (slideIndex === 1) {homeSwiperPrevButton.classList.remove('active')}
+    // If Index Of Slide Equals To 3 And Width Of Window Is More Or Equal To 991 Then Remove Class Of Active From Next Button
+    else if (slideIndex === 3 && window.innerWidth >= 991) {homeSwiperNextButton.classList.remove('active')}
+    // If Index Of Slide Equals To 4 And Width Of Window Is less Or Equal To 991 Then Remove Class Of Active From Next Button
+    else if (slideIndex === 4 && window.innerWidth <= 991) {homeSwiperNextButton.classList.remove('active')}
     // If Index Of Slide Was not 3 or 1 Then Add Class Of Active To Prev And Next Buttons
-    else {
-        homeSwiperNextButton.classList.add('active')
-        homeSwiperPrevButton.classList.add('active')
-    }
+    else {homeSwiperNextButton.classList.add('active');homeSwiperPrevButton.classList.add('active');}
 
     // Removing Class Of Active From Pagination Item That Haves It And Adding It To Pagination Item To Activate
     homeSwiperPaginationToDeactivate.classList.remove('active');
