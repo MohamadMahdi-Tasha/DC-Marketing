@@ -46,8 +46,7 @@ body:last-child {
 .squar-size {width: 40px;}
 .border-my-dark-blue {border: 1px solid var(--my-dark-blue)}
 #mobile-nav-dark-bg {background-color: rgba(0,0,0,.5);transition: .3s;}
-#mobile-nav {transition: .3s;}
-
+#mobile-nav {transition: .3s;animation-timing-function: cubic-bezier(.4,0,.2,1)}
 #mobile-nav-holder[opened] > #mobile-nav-dark-bg{opacity: 1;pointer-events: visible;}
 #mobile-nav-holder:not([opened]) > #mobile-nav-dark-bg{opacity: 0;pointer-events: none;}
 #mobile-nav-holder[opened] > #mobile-nav{left: 0;}
