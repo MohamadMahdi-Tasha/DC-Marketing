@@ -44,6 +44,9 @@ body:last-child {
 :is(.home-swiper-prev-btn, .home-swiper-next-btn):not(.active) svg path{fill: var(--my-orange)}
 .footer-top-side {transform: translateY(-80px);}
 .squar-size {width: 40px;}
+.border-my-dark-blue {border: 1px solid var(--my-dark-blue)}
+#mobile-nav-dark-bg {background-color: rgba(0,0,0,.5);transition: .3s;}
+#mobile-nav {transition: .3s;}
 
 .third-section-bottom-items-holder > .third-section-bottom-item {
     background-size: contain;
@@ -81,12 +84,8 @@ body > footer {
 
 /*Hover, Active, ...*/
 .home-swiper .swiper-slide:hover {border-color: var(--my-orange) !important;}
-button.bg-transparent.text-my-orange:hover {
-    background-color: var(--my-orange) !important;
-    color: white !important;
-}
+button.bg-transparent.text-my-orange:hover {background-color: var(--my-orange) !important;color: white !important;}
+button.bg-transparent.text-my-dark-blue:hover {background-color: var(--my-dark-blue) !important;color: white !important;}
 
 /*Media Querys*/
-@media (max-width: 991px) {
-    .border-end-mq-991-0.border-end {border-right: none !important;}
-}
+@media (max-width: 991px) {  .border-end-mq-991-0.border-end {border-right: none !important;}  }
