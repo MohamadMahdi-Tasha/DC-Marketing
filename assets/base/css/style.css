@@ -1,6 +1,38 @@
+/*Importing Font*/
 @import "../font/font.css";
+
+/*Variables*/
+:root {
+    --my-grey: #4F5665;
+    --my-orange: #D85B28;
+}
+
+/*Defualt Styles*/
+button {
+    transition: .3s;
+    cursor: pointer;
+}
 
 body {
     font-size: 12px;
     font-family: 'Rubik' ,sans-serif !important;
+}
+
+/*Styles*/
+.text-my-grey {
+    color: var(--my-grey);
+}
+
+.border-my-orange {
+    border: 1px solid var(--my-orange);
+}
+
+.text-my-orange {
+    color: var(--my-orange);
+}
+
+/*Hover, Active, ...*/
+button.bg-transparent.text-my-orange:hover {
+    background-color: var(--my-orange) !important;
+    color: white !important;
 }
